@@ -3,9 +3,19 @@
 
 const arr = ['hello', 42, true, function() {}, "123", 3.14, 0, [1], {}];
 
-let isInteger = function() {};
+let isInteger = function(el) { 
+	return typeof el == 'number' && Math.floor(el) === Math.ceil(el)
+};
 
-Array.prototype.filter = function() {};
+Array.prototype.filter = function(f) {
+	let arr = []
+	for(let i = 0; i < this.length; i++) {
+		if (f(this[i])) {
+			arr.push(this[i])
+		}
+	}
+	return arr;
+};
 
 const newArr = arr.filter(isInteger);
 console.log(newArr);

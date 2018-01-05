@@ -3,5 +3,16 @@
 // HINT: recursion may help here
 
 function hasFalsyValue(obj) {
-    return false;
+	// Undefined, null, false, 0, NaN, ‘’
+	if (obj){
+		return true
+	}
+    return false
 }
+
+hasFalsyValue(undefined)
+hasFalsyValue(null)
+hasFalsyValue(false)
+hasFalsyValue(0)
+hasFalsyValue(NaN)
+hasFalsyValue('')
