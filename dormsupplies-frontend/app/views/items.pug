@@ -1,0 +1,18 @@
+extends template
+
+block content
+	div(style="text-align:center")
+		h1 ITEMS
+	form(style="text-align:center")
+		h2 Create a New Item
+		input(type='text' name='name' placeholder='Name')
+		br
+		input(type='number' name='price' placeholder='Price')
+		br
+		input(type='number' name='quantity' placeholder='Quantity')
+		br
+		button(a class='button' onclick="addItem()") Add Item
+	// javascript function to get all items from database
+	//- script.
+	//- 	items()
+	//- 	console.log('hello')
